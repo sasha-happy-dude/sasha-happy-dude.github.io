@@ -176,8 +176,10 @@ body {
     background-color: var(--black-color);
 }
 
-.item__link:hover {
-    color: var(--soft-violet);
+@media screen and (min-width: 768px) {
+    .item__link:hover {
+        color: var(--soft-violet);
+    }
 }
 
 .item__link:active {
@@ -319,10 +321,13 @@ body {
     outline: 2px solid var(--black-color);
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    color: var(--white-color);
-    background-color: var(--soft-violet);
+@media screen and (min-width: 768px) {
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: var(--white-color);
+        background-color: var(--soft-violet);
+    }
 }
 
 .swiper-button-next:active,
@@ -455,16 +460,6 @@ body {
     transition: fill .2s ease-in-out;
 }
 
-.instagram svg path {
-    -webkit-filter: contrast(0%) brightness(200%);
-    filter: contrast(0%) brightness(200%);
-    -webkit-transition: -webkit-filter .2s ease-in-out;
-    transition: -webkit-filter .2s ease-in-out;
-    -o-transition: filter .2s ease-in-out;
-    transition: filter .2s ease-in-out;
-    transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
-}
-
 .social__link:not(:last-child) {
     margin-right: var(--gap);
 }
@@ -474,29 +469,21 @@ body {
     outline: 1px solid var(--white-color);
 }
 
-.mail:hover svg path {
-    fill: var(--light-yellow);
+@media screen and (min-width: 768px) {
+    .mail:hover svg path {
+        fill: var(--light-yellow);
+    }
+
+    .phone:hover svg path {
+        fill: var(--soft-violet);
+    }
+
+    .telegram:hover svg path {
+        fill: var(--bright-blue);
+    }
 }
 
-.phone:hover svg path {
-    fill: var(--soft-violet);
-}
-
-.telegram:hover svg path {
-    fill: var(--bright-blue);
-}
-
-.instagram:hover svg path {
-    -webkit-filter: contrast(100%) brightness(100%);
-    filter: contrast(100%) brightness(100%);
-}
-
-.instagram:active svg path {
-    -webkit-filter: contrast(100%) brightness(0%);
-    filter: contrast(100%) brightness(0%);
-}
-
-.social__link:active:not(.instagram) svg path {
+.social__link:active svg path {
     fill: var(--black-color);
 }
 
@@ -789,8 +776,8 @@ body {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         font-size: 0px;
-        background: -webkit-gradient(linear, left top, left bottom, from(#A2C8CB), to(rgba(236, 236, 234, 0)));
         background: -o-linear-gradient(top, #A2C8CB 0%, rgba(236, 236, 234, 0) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#A2C8CB), to(rgba(236, 236, 234, 0)));
         background: linear-gradient(180deg, #A2C8CB 0%, rgba(236, 236, 234, 0) 100%);
     }
 
@@ -863,6 +850,10 @@ body {
 }
 
 @media (max-width: 376px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         max-width: 350px;
     }
