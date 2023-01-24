@@ -563,6 +563,10 @@ body {
         --gap: 15px;
     }
 
+    .container {
+        max-width: 650px;
+    }
+
     .experience__articles {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -612,6 +616,10 @@ body {
 }
 
 @media (max-width: 576px) {
+    body {
+        overflow-x: hidden;
+    }
+
     :root {
         --medium-fsz: 18px;
         --large-fsz: 22px;
@@ -736,6 +744,10 @@ body {
         --large-fsz: 18px;
     }
 
+    .container {
+        max-width: 460px;
+    }
+
     .hero__wrapper {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -851,6 +863,10 @@ body {
 }
 
 @media (max-width: 376px) {
+    .container {
+        max-width: 350px;
+    }
+
     .title {
         font-size: var(--medium-fsz);
         line-height: 1.2em;
